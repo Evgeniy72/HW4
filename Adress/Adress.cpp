@@ -1,5 +1,6 @@
 ﻿#include <fstream>
 #include <iostream>
+#include <string>
 class Adress
 {
 private:
@@ -10,7 +11,7 @@ public:
 		char nhh, nrh;
 		nhh = nh;
 		nrh = nr;
-		std::string ou = this->C + ", " + this->H + ", " + nhh;
+		std::string ou = this->C + ", " + this->H + ", " + std::to_string(nhh) + ", " + std::to_string(nrh);
 		return ou;
 	}
 	Adress()
