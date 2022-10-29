@@ -11,8 +11,7 @@ public:
 		std::string ou = this->C + ", " + this->H + ", " + std::to_string(nh) + ", " + std::to_string(nr);
 		return ou;
 	}
-		std::string a;
-		void get_C() { a = C;}
+		std::string get_city() { return C;}
 	Adress()
 	{
 		C = "Неизвесный";
@@ -35,9 +34,7 @@ void sort(Adress* adresses, int size) {
 			Adress ch1, ch2;
 			 ch1 = adresses[i];
 			 ch2 = adresses[i+1];
-			ch1.get_C();
-			ch2.get_C();
-			if (ch1.a > ch2.a)
+			if (ch1.get_city() > ch1.get_city())
 			{
 				Adress temp = adresses[i + 1];
 				adresses[i + 1] = adresses[i];
